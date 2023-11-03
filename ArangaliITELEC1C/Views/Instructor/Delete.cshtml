@@ -1,0 +1,35 @@
+﻿@model Instructor;
+
+<form asp-action="Delete" asp-controller="Instructor" method="post">
+    <h1> Are you sure you want to delete? </h1>
+    <div class="form-group">
+        <label asp-for="Id">Id</label>
+        <input asp-for="Id" class="form-control" readonly>
+    </div>
+    <div class="form-group">
+        <label asp-for="InstructorFirstName">First Name</label>
+        <input asp-for="InstructorFirstName" class="form-control" readonly>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="InstructorLastName">Last Name</label>
+        <input asp-for="InstructorLastName" class="form-control" readonly>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="InstructorIsTenured">Tenured</label>
+        <input asp-for="@Model.InstructorIsTenured" readonly></input>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DateHired">AdmussionDate</label>
+        <input asp-for="DateHired" class="form-control" readonly>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Rank">Rank</label>
+        <input asp-for="Rank" class="form-control" readonly></>
+    </div>
+    <button type="submit" class="btn btn-primary">Delete</button>
+    <button type="button" onclick="history.back()" class="btn btn-secondary">Cancel</button>
+</form>
